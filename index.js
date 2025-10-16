@@ -16,7 +16,7 @@ bot.on('join', async (event) => {
 
 bot.on('message', async (event) => {
   try {
-    const text = event.message.text;
+    const text = event.message.text.trim();
     const user = await bot.getUserProfile(event.source.userId);
     console.log('使用者', user);
 
