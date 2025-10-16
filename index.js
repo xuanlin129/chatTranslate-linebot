@@ -22,10 +22,6 @@ bot.on('message', async (event) => {
 
     if (event.message.type !== 'text' || (!text.startsWith('!') && !text.startsWith('！'))) return;
 
-    if (event.source.groupId === 'C39422d7ead4c63270b15cb47a8de8d16') {
-      return;
-    }
-
     const translateText = await translate(text.slice(1));
     event.reply(translateText);
   } catch (ex) {
