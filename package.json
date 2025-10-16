@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "chattranslate-linebot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "ngrok": "npx ngrok http 3000 --region jp",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.1",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "http-proxy-agent": "^7.0.2",
+    "linebot": "^1.6.1"
+  },
+  "devDependencies": {
+    "ngrok": "^5.0.0-beta.2",
+    "nodemon": "^3.1.10"
+  }
+}
