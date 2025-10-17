@@ -39,10 +39,10 @@ export default async function translateWithProxy(inputText, retryCount = 0) {
       })
       .join('\n');
 
-    console.log(`翻譯成功: "${inputText}"\n${output}`);
+    // console.log(`翻譯成功: "${inputText}"\n${output}`);
     return output;
   } catch (error) {
-    console.warn(`翻譯失敗 (${retryCount + 1}次): ${error.message}`);
+    // console.warn(`翻譯失敗 (${retryCount + 1}次): ${error.message}`);
 
     if (retryCount < PROXY_LIST.length) {
       await delay(100);
