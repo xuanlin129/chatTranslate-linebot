@@ -13,6 +13,11 @@ const bot = linebot({
 const groupModes = new Map();
 
 async function reply(event, text) {
+  const message = { type: 'text', text };
+  if (event.message?.quoteToken) {
+    message.quoteToken = event.message.quoteToken;
+  }
+
   const response = await fetch('https://api.line.me/v2/bot/message/reply', {
     method: 'POST',
     headers: {
@@ -21,7 +26,7 @@ async function reply(event, text) {
     },
     body: JSON.stringify({
       replyToken: event.replyToken,
-      messages: [{ type: 'text', text }],
+      messages: [message],
     }),
     signal: AbortSignal.timeout(5000),
   });
