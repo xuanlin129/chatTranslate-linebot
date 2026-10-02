@@ -13,6 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@vercel/functions": "^3.9.9",
     "@vitalets/google-translate-api": "^9.2.1",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
