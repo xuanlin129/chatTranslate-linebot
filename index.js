@@ -49,14 +49,6 @@ bot.on('message', async (event) => {
   }
 });
 
-app.get('/ping', (req, res) => {
-  const key = req.query.key;
-  if (!key || key !== process.env.PING_SECRET) {
-    return res.status(403).send('Forbidden');
-  }
-  res.send('pong');
-});
-
 app.post('/', bot.parser());
 
 const port = process.env.PORT || 3000;
